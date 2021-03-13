@@ -126,6 +126,7 @@ web_apps(){
 	echo "############################"
 	echo "# c) Create a shortcut     #"
 	echo "# r) Remove a shortcut     #"
+	echo "# l) List shortcuts        #"
 	echo "############################"
 	echo "# d) Done                  #"
 	echo "############################"
@@ -149,11 +150,18 @@ NoDisplay=false
     	""" > ~/.local/share/applications/$name.desktop
     	;;
   	  r)
+		ls ~/.local/share/applications/
+		echo
     	read -p "Website name: " name
     	rm ~/.local/share/applications/$name.desktop
     	echo "Shortcut removed"
     	sleep 2
     	;;
+   	  l)
+		ls ~/.local/share/applications/
+		echo
+		read -p "Press [Enter] to go back"
+		;;
   	  d)
     	break
     	;;
@@ -178,6 +186,7 @@ echo "# 1) Update System         #"
 echo "# 2) Install TrudeGnome    #"
 echo "# 3) Install apps          #"
 echo "# 4) Create Web shortcuts  #"
+echo "# 5) Install drivers       #"
 echo "############################"
 echo "# a) All                   #"
 echo "# d) Done                  #"
@@ -199,11 +208,15 @@ case $choice in
   4)
     web_apps
     ;;
+  5)
+	sudo software-properties-gtk
+	;;
   a)
 	system_update
 	trude_gnome
 	install_apps
 	web_apps
+	sudo software-properties-gtk
     ;;
   d)
     break
