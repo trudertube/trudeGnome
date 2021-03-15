@@ -4,6 +4,7 @@
 # trudeGnome.sh by @TrudeEH                         #
 # This is the official install script for TrudeOS   #
 #    Tested on Ubuntu 20.10                         #
+#    	       Ubuntu 20.04                         #
 #####################################################
 
 sudo aaaaaaaaaaaaaaaa &> /dev/null
