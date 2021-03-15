@@ -352,7 +352,7 @@ case $choice in
 	;;
   a)
 	system_update
-	gnome_extrase
+	gnome_extras
 	install_apps
 	web_apps
 	sudo software-properties-gtk
